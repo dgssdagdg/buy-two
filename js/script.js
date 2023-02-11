@@ -1,9 +1,9 @@
 document.addEventListener('click', function(event) {
+
     if (event.target.closest('.online-select')) {
 		let online = event.target.closest('.online-select');
         online.classList.toggle('_online-select-open');
     }
-
     if (event.target.closest('.online-block-item')) {
         var popClick = event.target.closest('.online-block-item').textContent;
 		fz = event.target.closest('.online-select');
@@ -67,5 +67,31 @@ document.addEventListener('click', function(event) {
         menuBtn.classList.toggle('active');
         menu.classList.toggle('active');
         body.classList.toggle('overflow');
+    }
+    let viewTwo = document.querySelector('.view-min-two');
+    let viewOne = document.querySelector('.view-min-one');
+    let viewOneBtn = document.querySelector('.view-min-views-one');
+    let viewTwoBtn = document.querySelector('.view-min-views-two');
+    if (event.target.closest('.view-min-views-two') && viewOne.closest('.view-min-active')) {
+        viewTwo.classList.add('view-min-active');
+        viewOne.classList.remove('view-min-active');
+        viewTwoBtn.classList.add('view-min-views-active');
+        viewOneBtn.classList.remove('view-min-views-active');
+    }
+    if (event.target.closest('.view-min-views-one') && viewTwo.closest('.view-min-active')) {
+        viewOne.classList.add('view-min-active');
+        viewTwo.classList.remove('view-min-active');
+        viewTwoBtn.classList.remove('view-min-views-active');
+        viewOneBtn.classList.add('view-min-views-active');
+    }
+    let viewDayOne = document.querySelector('.view-column-days-day-one');
+    let viewDayTwo = document.querySelector('.view-column-days-day-two');
+    if (event.target.closest('.view-column-days-day-one') && viewDayTwo.closest('.view-column-days-day-active')) {
+        viewDayOne.classList.add('view-column-days-day-active');
+        viewDayTwo.classList.remove('view-column-days-day-active');
+    }
+    if (event.target.closest('.view-column-days-day-two') && viewDayOne.closest('.view-column-days-day-active')) {
+        viewDayTwo.classList.add('view-column-days-day-active');
+        viewDayOne.classList.remove('view-column-days-day-active');
     }
 })
