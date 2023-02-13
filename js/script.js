@@ -84,14 +84,22 @@ document.addEventListener('click', function(event) {
         viewTwoBtn.classList.remove('view-min-views-active');
         viewOneBtn.classList.add('view-min-views-active');
     }
-    let viewDayOne = document.querySelector('.view-column-days-day-one');
-    let viewDayTwo = document.querySelector('.view-column-days-day-two');
-    if (event.target.closest('.view-column-days-day-one') && viewDayTwo.closest('.view-column-days-day-active')) {
-        viewDayOne.classList.add('view-column-days-day-active');
-        viewDayTwo.classList.remove('view-column-days-day-active');
+    // let viewDayOne = document.querySelector('.view-column-days-day-one');
+    // let viewDayTwo = document.querySelector('.view-column-days-day-two');
+
+    if (event.target.closest('.view-column-days-one')) {
+        let vv = event.target.closest('.view-column-days-one');
+        let viewDayOne = vv.querySelector('.view-column-days-day-one');
+        let viewDayTwo = vv.querySelector('.view-column-days-day-two');
+        console.log('adgf')
+        if (event.target.closest('.view-column-days-day-one') && viewDayTwo.closest('.view-column-days-day-active')) {
+            viewDayOne.classList.add('view-column-days-day-active');
+            viewDayTwo.classList.remove('view-column-days-day-active');
+        }
+        if (event.target.closest('.view-column-days-day-two') && viewDayOne.closest('.view-column-days-day-active')) {
+            viewDayTwo.classList.add('view-column-days-day-active');
+            viewDayOne.classList.remove('view-column-days-day-active');
+        }
     }
-    if (event.target.closest('.view-column-days-day-two') && viewDayOne.closest('.view-column-days-day-active')) {
-        viewDayTwo.classList.add('view-column-days-day-active');
-        viewDayOne.classList.remove('view-column-days-day-active');
-    }
+
 })
