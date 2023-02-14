@@ -84,8 +84,6 @@ document.addEventListener('click', function(event) {
         viewTwoBtn.classList.remove('view-min-views-active');
         viewOneBtn.classList.add('view-min-views-active');
     }
-    // let viewDayOne = document.querySelector('.view-column-days-day-one');
-    // let viewDayTwo = document.querySelector('.view-column-days-day-two');
 
     if (event.target.closest('.view-column-days-one')) {
         let vv = event.target.closest('.view-column-days-one');
@@ -101,5 +99,14 @@ document.addEventListener('click', function(event) {
             viewDayOne.classList.remove('view-column-days-day-active');
         }
     }
-
+    if (event.target.closest('.fine-item-open')) {
+        let fineItems = event.target.closest('.fine-item');
+        fineItems.classList.toggle('fine-items-active') 
+    }
+    let popUser = document.querySelector('.pop-up-use');
+    if (event.target.closest('.pop-up-user-open')) {
+        popUser.classList.toggle('pop-up-open');
+    } else if (!event.target.closest('.pop-up-content') && popUser.closest('.pop-up-open')) {
+        popUser.classList.remove('pop-up-open');
+    }
 })
