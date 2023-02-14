@@ -3729,6 +3729,11 @@ input:disabled + label:before {
     font-size: 12px;
   }
 }
+.pop-up-use {
+  visibility: visible;
+  opacity: 1;
+  background: #F0F2F6;
+}
 .pop-up-use .pop-up-content {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 502px;

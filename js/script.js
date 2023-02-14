@@ -103,10 +103,4 @@ document.addEventListener('click', function(event) {
         let fineItems = event.target.closest('.fine-item');
         fineItems.classList.toggle('fine-items-active') 
     }
-    let popUser = document.querySelector('.pop-up-use');
-    if (event.target.closest('.pop-up-user-open')) {
-        popUser.classList.toggle('pop-up-open');
-    } else if (!event.target.closest('.pop-up-content') && popUser.closest('.pop-up-open')) {
-        popUser.classList.remove('pop-up-open');
-    }
 })
