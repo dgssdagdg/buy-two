@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
                     <div class="tc-one">
                         <div class="tc-logo">
                             <div class="tc-logo-img">
-                                <img src="img/logo.png" alt="Логотип">
+                                <img src="../img/logo.png" alt="Логотип">
                             </div>
                             <div class="tc-texts">
                                 <div class="tc-texts-title">mos-propusk-24.ru</div>
@@ -168,27 +168,6 @@
                         </a>
                     </div>
                     <div class="tc-two">
-                        <div class="tc-buttons">
-                            <div class="tc-button tc-button-error">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.4894 3.51075C15.8086 -1.17002 8.19199 -1.17048 3.51076 3.51075C-1.17048 8.19199 -1.17002 15.8081 3.51076 20.4894C8.19153 25.1706 15.8081 25.1706 20.4894 20.4894C25.1701 15.8081 25.1701 8.19153 20.4894 3.51075ZM16.7344 16.7344C16.3738 17.095 15.7892 17.095 15.4286 16.7344L12.0001 13.3059L8.40855 16.8974C8.04792 17.258 7.46335 17.258 7.10272 16.8974C6.74209 16.5368 6.74209 15.9522 7.10272 15.5916L10.6942 12.0001L7.26572 8.57155C6.90509 8.21092 6.90509 7.62588 7.26572 7.26572C7.62635 6.90509 8.21092 6.90509 8.57155 7.26572L12.0001 10.6942L15.2651 7.42918C15.6257 7.06855 16.2103 7.06855 16.5709 7.42918C16.9316 7.78981 16.9316 8.37438 16.5709 8.73501L13.3059 12.0001L16.7344 15.4286C17.095 15.7892 17.095 16.3738 16.7344 16.7344Z" fill="white"/>
-                                </svg>
-                                Ошибка 244                                        
-                            </div>
-                            <div class="tc-button">
-                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_408_1236)">
-                                    <path d="M25.3958 4.24945C24.5914 3.44394 23.2851 3.44445 22.4796 4.24945L9.35443 17.3751L3.52086 11.5416C2.71535 10.7361 1.40962 10.7361 0.604106 11.5416C-0.201409 12.3471 -0.201409 13.6528 0.604106 14.4584L7.89575 21.75C8.29825 22.1525 8.82604 22.3543 9.35387 22.3543C9.88171 22.3543 10.41 22.153 10.8125 21.75L25.3958 7.16616C26.2013 6.3612 26.2013 5.05492 25.3958 4.24945Z" fill="white"/>
-                                    </g>
-                                    <defs>
-                                    <clipPath id="clip0_408_1236">
-                                    <rect width="26" height="26" fill="white"/>
-                                    </clipPath>
-                                    </defs>
-                                </svg>
-                                Страница загружена                                        
-                            </div>
-                        </div>
                         <div class="tc-top tc-style">
                             <div class="tc-top-money _tc-text">
                                 Баланс:
@@ -408,83 +387,58 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tc-end">
+                        <div class="tc-end diagnostic-table">
+
                             <table class="tc-table" >
-                                <tr >
+                                <tr>
                                     <th>№</th>
                                     <th>Рег. номер</th>
-                                    <th>Дата добавления</th>
+                                    <th>VIN</th>
+                                    <th>Номер ЕАИСТО</th>
+                                    <th>Дата</th>
+                                    <th>Дата до</th>
                                     <th>Статус</th>
+                                    <th>Кнопка</th>
                                 </tr>
-                                <tr class="tc-use tc-crug">
+                                <tr class="diagnostic-table-red">
                                     <td>1</td>
                                     <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
+                                    <td><p>Y3M544018C0001374 </p><span>Y3M544018C0001374</span></td>
+                                    <td>141421032301744</td>
+                                    <td>14.02.2023</td>
+                                    <td>14.02.2024</td>
+                                    <td><span></span></td>
+                                    <td>
+                                        <button type="button">Заказать ДК</button>
+                                    </td>
                                 </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>2</td>
+                                <tr class="diagnostic-table-green">
+                                    <td>1</td>
                                     <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
+                                    <td><p>Y3M544018C0001374 </p><span>Y3M544018C0001374</span></td>
+                                    <td>141421032301744</td>
+                                    <td>14.02.2023</td>
+                                    <td>14.02.2024</td>
+                                    <td><span></span></td>
+                                    <td>
+                                        <button type="button">Заказать ДК</button>
+                                    </td>
                                 </tr>
-                                <tr class="tc-off tc-crug">
-                                    <td>3</td>
+                                <tr class="diagnostic-table-gray">
+                                    <td>1</td>
                                     <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>4</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>5</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-off tc-crug">
-                                    <td>6</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>7</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>8</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-off tc-crug">
-                                    <td>9</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>10</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
-                                </tr>
-                                <tr class="tc-use tc-crug">
-                                    <td>12</td>
-                                    <td>А338СУ122</td>
-                                    <td>23.12.2022 <span>10:54</span></td>
-                                    <td>В работе</td>
+                                    <td><p>Y3M544018C0001374 </p><span>Y3M544018C0001374</span></td>
+                                    <td>141421032301744</td>
+                                    <td>14.02.2023</td>
+                                    <td>14.02.2024</td>
+                                    <td><span></span></td>
+                                    <td>
+                                        <button type="button">Заказать ДК</button>
+                                    </td>
                                 </tr>
                             </table>
                             <div class="table-mini">
-                                <div class="table-mini-block table-mini-block-use">
+                                <div class="table-mini-block diagnostic-mini-block-red">
                                     <div class="table-mini-top">
                                      <div class="table-mini-top-number _table-text-style">Рег. номер</div>
                                      <div class="table-mini-top-text">
@@ -496,13 +450,29 @@
                                      </div>  
                                     </div>
                                     <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">VIN</div>
+                                            <div class="table-mini-item">Y3M544018C0001374</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Номер ЕАИСТО</div>
+                                            <div class="table-mini-item">141421032301744</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата</div>
+                                            <div class="table-mini-item">14.02.2023</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата до</div>
+                                            <div class="table-mini-item">14.02.2024</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Статус</div>
+                                            <div class="table-mini-item"><span></span> Действует</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="table-mini-block table-mini-block-off">
+                                <div class="table-mini-block diagnostic-mini-block-green">
                                     <div class="table-mini-top">
                                      <div class="table-mini-top-number _table-text-style">Рег. номер</div>
                                      <div class="table-mini-top-text">
@@ -514,13 +484,29 @@
                                      </div>  
                                     </div>
                                     <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">На модерации</div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">VIN</div>
+                                            <div class="table-mini-item">Y3M544018C0001374</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Номер ЕАИСТО</div>
+                                            <div class="table-mini-item">141421032301744</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата</div>
+                                            <div class="table-mini-item">14.02.2023</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата до</div>
+                                            <div class="table-mini-item">14.02.2024</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Статус</div>
+                                            <div class="table-mini-item"><span></span> Действует</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="table-mini-block table-mini-block-use">
+                                <div class="table-mini-block diagnostic-mini-block-grey">
                                     <div class="table-mini-top">
                                      <div class="table-mini-top-number _table-text-style">Рег. номер</div>
                                      <div class="table-mini-top-text">
@@ -532,102 +518,32 @@
                                      </div>  
                                     </div>
                                     <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">VIN</div>
+                                            <div class="table-mini-item">Y3M544018C0001374</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Номер ЕАИСТО</div>
+                                            <div class="table-mini-item">141421032301744</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата</div>
+                                            <div class="table-mini-item">14.02.2023</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Дата до</div>
+                                            <div class="table-mini-item">14.02.2024</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <div class="table-mini-item">Статус</div>
+                                            <div class="table-mini-item"><span></span> Действует</div>
+                                        </div>
+                                        <div class="table-mini-items-box">
+                                            <button type="button" class="view-column-btn">Оплатить</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="table-mini-block table-mini-block-off">
-                                    <div class="table-mini-top">
-                                     <div class="table-mini-top-number _table-text-style">Рег. номер</div>
-                                     <div class="table-mini-top-text">
-                                        <span class="table-mini-top-text-item _table-text-style">А338СУ122</span>
-                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="1.41421" y1="1" x2="7" y2="6.58579" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="1" y1="-1" x2="8.89949" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                     </div>  
-                                    </div>
-                                    <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
-                                    </div>
-                                </div>
-                                <div class="table-mini-block table-mini-block-use">
-                                    <div class="table-mini-top">
-                                     <div class="table-mini-top-number _table-text-style">Рег. номер</div>
-                                     <div class="table-mini-top-text">
-                                        <span class="table-mini-top-text-item _table-text-style">А338СУ122</span>
-                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="1.41421" y1="1" x2="7" y2="6.58579" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="1" y1="-1" x2="8.89949" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                     </div>  
-                                    </div>
-                                    <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
-                                    </div>
-                                </div>
-                                <div class="table-mini-block table-mini-block-off">
-                                    <div class="table-mini-top">
-                                     <div class="table-mini-top-number _table-text-style">Рег. номер</div>
-                                     <div class="table-mini-top-text">
-                                        <span class="table-mini-top-text-item _table-text-style">А338СУ122</span>
-                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="1.41421" y1="1" x2="7" y2="6.58579" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="1" y1="-1" x2="8.89949" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                     </div>  
-                                    </div>
-                                    <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
-                                    </div>
-                                </div>
-                                <div class="table-mini-block table-mini-block-use">
-                                    <div class="table-mini-top">
-                                     <div class="table-mini-top-number _table-text-style">Рег. номер</div>
-                                     <div class="table-mini-top-text">
-                                        <span class="table-mini-top-text-item _table-text-style">А338СУ122</span>
-                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="1.41421" y1="1" x2="7" y2="6.58579" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="1" y1="-1" x2="8.89949" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                     </div>  
-                                    </div>
-                                    <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
-                                    </div>
-                                </div>
-                                <div class="table-mini-block table-mini-block-off">
-                                    <div class="table-mini-top">
-                                     <div class="table-mini-top-number _table-text-style">Рег. номер</div>
-                                     <div class="table-mini-top-text">
-                                        <span class="table-mini-top-text-item _table-text-style">А338СУ122</span>
-                                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <line x1="1.41421" y1="1" x2="7" y2="6.58579" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                            <line x1="1" y1="-1" x2="8.89949" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 14 1)" stroke="#8E909D" stroke-width="2" stroke-linecap="round"/>
-                                        </svg>
-                                     </div>  
-                                    </div>
-                                    <div class="table-mini-items">
-                                        <div class="table-mini-item">Дата добавления</div>
-                                        <div class="table-mini-item">23.12.2022<span>10:54</span></div>
-                                        <div class="table-mini-item">Статус</div>
-                                        <div class="table-mini-item">В работе</div>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="tc-end-control">
                                 <button type="button" class="tc-end-control-btn">
@@ -761,7 +677,7 @@
                 <div class="tc-one">
                     <div class="tc-logo">
                         <div class="tc-logo-img">
-                            <img src="img/logo.png" alt="Логотип">
+                            <img src="../img/logo.png" alt="Логотип">
                         </div>
                         <div class="tc-texts">
                             <div class="tc-texts-title">mos-propusk-24.ru</div>
@@ -943,6 +859,6 @@
         </main>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -103,4 +103,27 @@ document.addEventListener('click', function(event) {
         let fineItems = event.target.closest('.fine-item');
         fineItems.classList.toggle('fine-items-active') 
     }
+
+    let popUpDiagnostic = document.querySelector('.diagnostic-pop-up');
+    if (event.target.closest('.diagnostic-pop-up-active')) {
+        popUpDiagnostic.classList.toggle('pop-up-open');
+    } else if (!event.target.closest('.pop-up-content') && popUpDiagnostic.closest('.pop-up-open')) {
+        popUpDiagnostic.classList.remove('pop-up-open');
+    }
+    let popUpConfirmation = document.querySelector('.diagnostic-confirmation');
+    if (event.target.closest('.diagnostic-confirmation-active')) {
+        popUpConfirmation.classList.toggle('pop-up-open');
+    } else if (!event.target.closest('.pop-up-content') && popUpConfirmation.closest('.pop-up-open')) {
+        popUpConfirmation.classList.remove('pop-up-open');
+    }
 })
+
+const swiper = new Swiper('.diagnostic-pop-up-sliders', {
+    loop: true,
+
+    navigation: {
+      nextEl: '.diagnostic-button-next',
+      prevEl: '.diagnostic-button-prev',
+    },
+
+  });
