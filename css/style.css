@@ -5587,6 +5587,11 @@ input::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.vehicle-tc-end .cabinet-body-btn:hover svg path {
+  fill: white;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
 
 @media (max-width: 1200px) {
   .vehicle-body .view-body-right {
