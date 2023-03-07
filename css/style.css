@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -2444,17 +2445,15 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(hsl(231deg, 15%, 83%)), color-stop(10%, hsl(231deg, 15%, 82%)), color-stop(20%, hsl(231deg, 14%, 82%)), color-stop(30%, hsl(231deg, 14%, 82%)), color-stop(40%, hsl(231deg, 14%, 82%)), color-stop(50%, hsl(231deg, 14%, 82%)), color-stop(60%, hsl(231deg, 14%, 82%)), color-stop(70%, hsl(231deg, 14%, 82%)), color-stop(80%, hsl(231deg, 14%, 82%)), color-stop(90%, hsl(231deg, 15%, 82%)), to(hsl(231deg, 15%, 83%)));
   background-image: linear-gradient(90deg, hsl(231deg, 15%, 83%) 0%, hsl(231deg, 15%, 82%) 10%, hsl(231deg, 14%, 82%) 20%, hsl(231deg, 14%, 82%) 30%, hsl(231deg, 14%, 82%) 40%, hsl(231deg, 14%, 82%) 50%, hsl(231deg, 14%, 82%) 60%, hsl(231deg, 14%, 82%) 70%, hsl(231deg, 14%, 82%) 80%, hsl(231deg, 15%, 82%) 90%, hsl(231deg, 15%, 83%) 100%);
 }
-.view-tabel tr td:nth-of-type(5) span::before {
-  content: "Выдан";
-}
-.view-tabel tr td:nth-of-type(4) span::before {
+.view-tabel tr td:nth-of-type(4) span p {
   content: "Ночь";
   left: -30px !important;
+  top: -36px !important;
 }
 .view-tabel tr td:nth-of-type(4) span, .view-tabel tr td:nth-of-type(5) span {
   position: relative;
 }
-.view-tabel tr td:nth-of-type(4) span::before, .view-tabel tr td:nth-of-type(5) span::before {
+.view-tabel tr td:nth-of-type(4) span p, .view-tabel tr td:nth-of-type(5) span p {
   position: absolute;
   white-space: nowrap;
   height: 27px;
@@ -2485,13 +2484,13 @@ body {
   border: 10px solid transparent;
   border-top: 10px solid white;
   top: -10px;
-  left: -3px;
+  left: -4px;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.view-tabel tr td:nth-of-type(4) span:hover::before, .view-tabel tr td:nth-of-type(4) span:hover::after, .view-tabel tr td:nth-of-type(5) span:hover::before, .view-tabel tr td:nth-of-type(5) span:hover::after {
+.view-tabel tr td:nth-of-type(4) span:hover p, .view-tabel tr td:nth-of-type(4) span:hover::after, .view-tabel tr td:nth-of-type(5) span:hover p, .view-tabel tr td:nth-of-type(5) span:hover::after {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.3s ease 0s;
@@ -5658,4 +5657,76 @@ input::placeholder {
   .vehicle-body-btns .tc-body-btn-red {
     width: 100%;
   }
+}
+.pop-mini .pop-up-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 518px;
+          flex: 0 1 518px;
+}
+.pop-mini .pop-up-form {
+  padding: 53px 40px 40px;
+}
+
+.pop-up-files {
+  margin-bottom: 60px;
+}
+
+.pop-up-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+.pop-up-file:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.pop-up-file-block {
+  position: relative;
+  background: #FFECEC;
+  border-radius: 5px;
+  font-family: "Abhaya Libre", serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 118.75%;
+  color: #EC8080;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  height: 33px;
+  padding: 0 40px;
+}
+.pop-up-file-block input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.pop-up-file-text {
+  color: #4E505A;
+}
+
+.pop-up-files-text {
+  color: #8E909D;
+  margin-top: 30px;
+}
+
+.pop-up-id-actives {
+  opacity: 1 !important;
+  visibility: visible !important;
 }

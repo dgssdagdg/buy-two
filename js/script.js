@@ -1,4 +1,17 @@
+
 document.addEventListener('click', function(event) {
+    if (event.target.closest('._pop-btn')) {
+        let events = event.target.closest('._pop-btn');
+        let ID = events.id;
+        let data = document.querySelector(`[data-id="#${ID}"]`)
+        data.classList.toggle('pop-up-id-actives');
+    }
+    if (!event.target.closest('.pop-up-content') && event.target.closest('.pop-up-global')) {
+        let popGlobalActive = event.target.closest('.pop-up-global');
+        if (popGlobalActive.closest('.pop-up-id-actives')) {
+            popGlobalActive.classList.remove('pop-up-id-actives');
+        }
+    }
 
     if (event.target.closest('.online-select')) {
 		let online = event.target.closest('.online-select');
@@ -12,11 +25,6 @@ document.addEventListener('click', function(event) {
     }
 
     let popUp = document.querySelector('.pop-up');
-    if (event.target.closest('.pop-up-active')) {
-        popUp.classList.toggle('pop-up-open');
-    } else if (!event.target.closest('.pop-up-content') && popUp.closest('.pop-up-open')) {
-        popUp.classList.remove('pop-up-open');
-    }
 
     if (event.target.closest('.pop-up-close-text')) {
         let popInput = document.querySelector('.pop-up-input-text');
@@ -26,12 +34,17 @@ document.addEventListener('click', function(event) {
     if (event.target.closest('.pop-up-input-active')) {
         ev.classList.toggle('pop-up-input-open');
     }
+
+    //Тут поизменял----
     let popInputSelect = document.querySelector('.pop-up-input-select');
     if (event.target.closest('.pop-up-item')) {
         let popClick = event.target.textContent;
         popInputSelect.value = popClick;
-    } else if (!event.target.closest('.pop-up-content') && ev.closest('.pop-up-input-open')) {
-        ev.classList.remove('pop-up-input-open');
+    } else if (!event.target.closest('.pop-up-content') && event.target.closest('.pop-up-input-select')) {
+        if(ev.closest('.pop-up-input-open')) {
+            ev.classList.remove('pop-up-input-open');
+        }
+        
     }
 
     if (event.target.closest('.table-mini-top-text')) {
@@ -104,20 +117,7 @@ document.addEventListener('click', function(event) {
         fineItems.classList.toggle('fine-items-active') 
     }
 
-    let popUpDiagnostic = document.querySelector('.diagnostic-pop-up');
-    if (event.target.closest('.diagnostic-pop-up-active')) {
-        popUpDiagnostic.classList.toggle('pop-up-open');
-    } else if (!event.target.closest('.pop-up-content') && popUpDiagnostic.closest('.pop-up-open')) {
-        popUpDiagnostic.classList.remove('pop-up-open');
-    }
-    let popUpConfirmation = document.querySelector('.diagnostic-confirmation');
-    if (event.target.closest('.diagnostic-confirmation-active')) {
-        popUpConfirmation.classList.toggle('pop-up-open');
-    } else if (!event.target.closest('.pop-up-content') && popUpConfirmation.closest('.pop-up-open')) {
-        popUpConfirmation.classList.remove('pop-up-open');
-    }
 })
-
 const swiper = new Swiper('.diagnostic-pop-up-sliders', {
     loop: true,
 
@@ -126,4 +126,4 @@ const swiper = new Swiper('.diagnostic-pop-up-sliders', {
       prevEl: '.diagnostic-button-prev',
     },
 
-  });
+});
